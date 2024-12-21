@@ -21,7 +21,7 @@ module.exports = async (kernel) => {
         params: {
           json2: "{{envs}}"
         }
-      }
+      },
       {
         method: "json.set",
         params: {
