@@ -13,7 +13,7 @@ module.exports = async (kernel) => {
           "mcpServers.everart": {
             "command": "npx",
             "env": {
-              EVERART_API_KEY: kernel.envs.EVERART_API_KEY
+              EVERART_API_KEY: "{{kernel.envs.EVERART_API_KEY}}"
             },
             "args": [
               "-y",
