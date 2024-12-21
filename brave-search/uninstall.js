@@ -1,14 +1,12 @@
+const Config = require('../config')
 module.exports = {
   run: async (kernel) => {
-    const config =  {
-      darwin: kernel.path(kernel.envs.HOME, "Library/Application Support/Claude/claude_desktop_config.json"),
-      win32: kernel.path(kernel.envs.APPDATA, 'Claude/claude_desktop_config.json')
-    }
+    const config = Config(kernel)
     return [
       {
         method: "json.rm",
         params: {
-          [config[kernel.platform]]: ["mcpServers.brave-search"]
+          [config]: ["mcpServers.brave-search"]
         }
       },
     ]

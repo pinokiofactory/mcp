@@ -1,16 +1,20 @@
+const Config = require('../config')
 module.exports = {
-  config: {
-    darwin: "{{env.HOME}}/Library/Application Support/Claude/claude_desktop_config.json",
-    win32: "{{path.resolve(env.APPDATA, 'Claude/claude_desktop_config.json')}}",
-  },
   run: async (kernel) => {
+    const config = Config(kernel)
     return [
       {
         method: "json.rm",
         params: {
-          "{{self.config[platform]}}": ["mcpServers.filesystem"]
+          [config]: ["mcpServers.filesystem"]
         }
       },
+      {
+        method: "log",
+        params: {
+          text: `Install Done. Config updated at ${config}`
+        }
+      }
     ]
   }
 }

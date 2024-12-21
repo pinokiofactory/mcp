@@ -1,9 +1,7 @@
+const Config = require('../config')
 module.exports = async (kernel) => {
+  const config = Config(kernel)
   return {
-    config: {
-      darwin: "{{env.HOME}}/Library/Application Support/Claude/claude_desktop_config.json",
-      win32: "{{path.resolve(env.APPDATA, 'Claude/claude_desktop_config.json')}}",
-    },
     pre: [{
       env: "GOOGLE_MAPS_API_KEY",
       description: "Google maps api key",
@@ -11,7 +9,7 @@ module.exports = async (kernel) => {
     run: [{
       method: "json.set",
       params: {
-        "{{self.config[platform]}}": {
+        [config]: {
           "mcpServers.google-maps": {
             "env": {
               "GOOGLE_MAPS_API_KEY": kernel.envs.GOOGLE_MAPS_API_KEY
@@ -23,6 +21,11 @@ module.exports = async (kernel) => {
             ],
           }
         }
+      }
+    }, {
+      method: "log",
+      params: {
+        text: `Install Done. Config updated at ${config}`
       }
     }]
   }

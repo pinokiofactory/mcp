@@ -1,8 +1,6 @@
+const Config = require('../config')
 module.exports = async (kernel) => {
-  const config =  {
-    darwin: kernel.path(kernel.envs.HOME, "Library/Application Support/Claude/claude_desktop_config.json"),
-    win32: kernel.path(kernel.envs.APPDATA, 'Claude/claude_desktop_config.json')
-  }
+  const config = Config(kernel)
   return {
     pre: [{
       env: "EVERART_API_KEY",
@@ -11,7 +9,7 @@ module.exports = async (kernel) => {
     run: [{
       method: "json.set",
       params: {
-        [config[kernel.platform]]: {
+        [config]: {
           "mcpServers.everart": {
             "command": "npx",
             "env": {
