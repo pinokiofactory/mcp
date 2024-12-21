@@ -19,7 +19,12 @@ module.exports = async (kernel) => {
       {
         method: "log",
         params: {
-          json2: "{{envs}}"
+          json2: {
+            "env": "{{envs}}",
+            "env2": "{{kernel.envs}}"
+            "env3": "{{kernel.env}}",
+            "env4": "{{env}}"
+          }
         }
       },
       {
