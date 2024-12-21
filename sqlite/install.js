@@ -21,7 +21,7 @@ module.exports = async (kernel) => {
         params: {
           json2: {
             "env": "{{envs}}",
-            "env2": "{{kernel.envs}}"
+            "env2": "{{kernel.envs}}",
             "env3": "{{kernel.env}}",
             "env4": "{{env}}"
           }
