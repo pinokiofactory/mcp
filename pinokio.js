@@ -4,7 +4,7 @@ module.exports = async (kernel) => {
   if (kernel.platform === "darwin") {
     p = `${path.resolve(kernel.envs.HOME, "Library/Application Support/Claude/claude_desktop_config.json")}`
   } else if (kernel.platform === "win32") {
-    p = `${path.resolve(kernel.envs.APPDATA, 'Claude/claude_desktop_config.json')}"
+    p = `${path.resolve(kernel.envs.APPDATA, 'Claude/claude_desktop_config.json')}`
   }
   return {
     version: "2.2",
