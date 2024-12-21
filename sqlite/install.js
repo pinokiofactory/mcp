@@ -12,7 +12,7 @@ module.exports = async (kernel) => {
         params: {
           message: [
             "npm install",
-            "node index test.db"
+            "node index {{envs.SQLITE_FILE_NAME}}"
           ],
         }
       },
