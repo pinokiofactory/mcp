@@ -22,6 +22,11 @@ module.exports = async (kernel) => {
           }
         }
       }
+    }, {
+      method: "log",
+      params: {
+        text: `Install Done. Config updated at ${config}`
+      }
     }]
   }
 }
