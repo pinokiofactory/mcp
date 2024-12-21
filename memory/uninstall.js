@@ -6,7 +6,7 @@ module.exports = async (kernel) => {
       {
         method: "json.rm",
         params: {
-          "{{self.config[platform]}}": ["mcpServers.memory"]
+          [config]: ["mcpServers.memory"]
         }
       },
       {

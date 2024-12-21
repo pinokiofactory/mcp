@@ -1,12 +1,12 @@
 const Config = require('../config')
-module.exports = {
-  run: async (kernel) => {
-    const config = Config(kernel)
-    return [
+module.exports = async (kernel) => {
+  const config = Config(kernel)
+  return {
+    run: [
       {
         method: "json.rm",
         params: {
-          [config[kernel.platform]]: ["mcpServers.everart"]
+          [config]: ["mcpServers.everart"]
         }
       },
       {

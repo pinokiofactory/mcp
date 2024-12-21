@@ -19,7 +19,7 @@ module.exports = async (kernel) => {
       {
         method: "json.set",
         params: {
-          "{{self.config[platform]}}": {
+          [config]: {
             "mcpServers.sqlite": {
               "command": "uvx",
               "env": {

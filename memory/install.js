@@ -6,7 +6,7 @@ module.exports = async (kernel) => {
       {
         method: "json.set",
         params: {
-          "{{self.config[platform]}}": {
+          [config]: {
             "mcpServers.memory": {
               "command": "npx",
               "args": [
