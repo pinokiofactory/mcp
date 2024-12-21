@@ -30,7 +30,7 @@ module.exports = async (kernel) => {
                 "mcp-server-sqlite",
                 "--db-path",
                 "{{path.resolve(cwd, kernel.envs.SQLITE_FILE_NAME)}}",
-                "{{kernel.envs.SQLITE_FILE_NAME}}"
+                "{{envs.SQLITE_FILE_NAME}}"
               ]
             },
           }
