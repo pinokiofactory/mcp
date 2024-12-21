@@ -1,7 +1,7 @@
 const path = require('path')
 module.exports = {
   return {
-    version: "2.2",
+    version: "3.0",
     title: "MCP",
     description: "",
     icon: "icon.png",
