@@ -23,13 +23,13 @@ module.exports = async (kernel) => {
             "mcpServers.sqlite": {
               "command": "uvx",
               "env": {
-                "HOME": "{{kernel.envs.HOME}}",
-                "PATH": "{{kernel.envs.PATH}}",
+                "HOME": kernel.envs.HOME,
+                "PATH": kernel.envs.PATH
               },
               "args": [
                 "mcp-server-sqlite",
                 "--db-path",
-                "{{path.resolve(cwd, env.SQLITE_FILE_NAME)}}"
+                "{{path.resolve(cwd, kernel.envs.SQLITE_FILE_NAME)}}"
               ]
             },
           }
