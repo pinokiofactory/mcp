@@ -12,6 +12,8 @@ module.exports = async (kernel) => {
         [config]: {
           "mcpServers.brave-search": {
             "env": {
+              "HOME": "{{envs.HOME}}",
+              "PATH": "{{envs.PATH}}",
               "BRAVE_API_KEY": "{{envs.BRAVE_API_KEY}}"
             },
             "command": "npx",

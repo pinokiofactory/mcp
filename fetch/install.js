@@ -8,6 +8,10 @@ module.exports = async (kernel) => {
         params: {
           [config]: {
             "mcpServers.fetch": {
+              "env": {
+                "HOME": "{{envs.HOME}}",
+                "PATH": "{{envs.PATH}}",
+              },
               "command": "uvx",
               "args": ["mcp-server-fetch"]
             }

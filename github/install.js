@@ -13,6 +13,8 @@ module.exports = async (kernel) => {
           [config]: {
             "mcpServers.github": {
               "env": {
+                "HOME": "{{envs.HOME}}",
+                "PATH": "{{envs.PATH}}",
                 "GITHUB_PERSONAL_ACCESS_TOKEN": "{{envs.GITHUB_PERSONAL_ACCESS_TOKEN}}"
               },
               "command": "npx",

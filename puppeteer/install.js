@@ -8,6 +8,10 @@ module.exports = async (kernel) => {
         [config]: {
           "mcpServers.puppeteer": {
             "command": "npx",
+            "env": {
+              "HOME": "{{envs.HOME}}",
+              "PATH": "{{envs.PATH}}",
+            },
             "args": [
               "-y",
               "@modelcontextprotocol/server-puppeteer"

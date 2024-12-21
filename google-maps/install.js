@@ -12,6 +12,8 @@ module.exports = async (kernel) => {
         [config]: {
           "mcpServers.google-maps": {
             "env": {
+              "HOME": "{{envs.HOME}}",
+              "PATH": "{{envs.PATH}}",
               "GOOGLE_MAPS_API_KEY": "{{envs.GOOGLE_MAPS_API_KEY}}"
             },
             "command": "npx",

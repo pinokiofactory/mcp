@@ -12,6 +12,10 @@ module.exports = async (kernel) => {
         [config]: {
           "mcpServers.filesystem": {
             "command": "npx",
+            "env": {
+              "HOME": "{{envs.HOME}}",
+              "PATH": "{{envs.PATH}}",
+            },
             "args": "{{[ '-y', '@modelcontextprotocol/server-filesystem' ].concat(envs.ALLOWED_DIRECTORIES ? envs.ALLOWED_DIRECTORIES.split(',') : [])}}"
           }
         }

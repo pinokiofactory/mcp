@@ -9,6 +9,10 @@ module.exports = async (kernel) => {
           [config]: {
             "mcpServers.memory": {
               "command": "npx",
+              "env": {
+                "HOME": "{{envs.HOME}}",
+                "PATH": "{{envs.PATH}}",
+              },
               "args": [
                 "-y",
                 "@modelcontextprotocol/server-memory"
