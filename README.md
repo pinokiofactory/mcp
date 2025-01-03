@@ -15,9 +15,21 @@
 
 Read and Write to an SQLite database
 
+
+
+https://github.com/user-attachments/assets/6ce9ff63-08c3-446d-8e83-6c7341f287c6
+
+
+
 ## Puppeteer
 
 Control the browser with Claude
+
+
+
+https://github.com/user-attachments/assets/438bd453-1912-4b95-b127-e7906e4881ba
+
+
 
 # 1. What is MCP?
 
