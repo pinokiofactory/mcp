@@ -31,9 +31,11 @@ module.exports = {
         ]
       }
     }).concat([{
+      icon: "fa-solid fa-arrows-rotate",
       text: "Update",
       href: "update.json"
     }, {
+      icon: "fa-regular fa-folder-open",
       text: "Open MCP Config File",
       href: p,
       fs: true
