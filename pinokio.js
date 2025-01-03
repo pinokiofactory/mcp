@@ -23,10 +23,11 @@ module.exports = {
       "everart",
     ].map((x) => {
       return {
+        icon: "fa-solid fa-square",
         text: x,
         menu: [
-          { text: "Install", href: `${x}/install.js` },
-          { text: "Uninstall", href: `${x}/uninstall.js` }
+          { icon: 'fa-solid fa-plus', text: "Install", href: `${x}/install.js` },
+          { icon: 'fa-solid fa-minus', text: "Uninstall", href: `${x}/uninstall.js` }
         ]
       }
     }).concat([{
